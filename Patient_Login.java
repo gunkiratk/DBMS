@@ -30,6 +30,8 @@ public class Patient_Login extends JPanel {
         button6 = new JButton();
         button7 = new JButton();
         button8 = new JButton();
+        button9 = new JButton();
+        button10 = new JButton();
 
         //======== this ========
 
@@ -80,7 +82,7 @@ public class Patient_Login extends JPanel {
         //---- button5 ----
         button5.setText("Fix Appointment with Doctor");
         add(button5);
-        button5.setBounds(new Rectangle(new Point(40, 230), button5.getPreferredSize()));
+        button5.setBounds(new Rectangle(new Point(30, 230), button5.getPreferredSize()));
 
         //---- label2 ----
         label2.setText("Patient Details");
@@ -103,6 +105,16 @@ public class Patient_Login extends JPanel {
         button8.setText("View Appointments");
         add(button8);
         button8.setBounds(new Rectangle(new Point(235, 230), button8.getPreferredSize()));
+
+        //---- button9 ----
+        button9.setText("Complex Query 1");
+        add(button9);
+        button9.setBounds(new Rectangle(new Point(30, 265), button9.getPreferredSize()));
+
+        //---- button10 ----
+        button10.setText("Complex Query 2");
+        add(button10);
+        button10.setBounds(245, 265, 115, 30);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -134,5 +146,7 @@ public class Patient_Login extends JPanel {
     private JButton button6;
     private JButton button7;
     private JButton button8;
+    private JButton button9;
+    private JButton button10;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
