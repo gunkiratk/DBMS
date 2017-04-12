@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Patient_SearchPrescription p = new Patient_SearchPrescription();
+        Admin_ViewPatient a = new Admin_ViewPatient();
         // write your code here
     }
 }
