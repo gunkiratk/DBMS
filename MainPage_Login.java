@@ -26,16 +26,17 @@ public class MainPage_Login extends JFrame {
         button1 = new JButton();
         button2 = new JButton();
         passwordField1 = new JPasswordField();
+        button3 = new JButton();
 
         //======== this ========
 
-/*        // JFormDesigner evaluation mark
+        // JFormDesigner evaluation mark
         setBorder(new javax.swing.border.CompoundBorder(
             new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
                 "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
                 javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
                 java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-*/
+
         setLayout(null);
 
         //---- label1 ----
@@ -62,11 +63,16 @@ public class MainPage_Login extends JFrame {
         button1.setBounds(new Rectangle(new Point(175, 145), button1.getPreferredSize()));
 
         //---- button2 ----
-        button2.setText("Sign Up");
+        button2.setText("Sign Up as a Patient");
         add(button2);
-        button2.setBounds(new Rectangle(new Point(325, 255), button2.getPreferredSize()));
+        button2.setBounds(new Rectangle(new Point(260, 230), button2.getPreferredSize()));
         add(passwordField1);
         passwordField1.setBounds(200, 105, 75, passwordField1.getPreferredSize().height);
+
+        //---- button3 ----
+        button3.setText("Sign Up as a Doctor");
+        add(button3);
+        button3.setBounds(260, 260, 130, 30);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -93,5 +99,6 @@ public class MainPage_Login extends JFrame {
     private JButton button1;
     private JButton button2;
     private JPasswordField passwordField1;
+    private JButton button3;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
