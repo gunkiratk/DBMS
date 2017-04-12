@@ -1,9 +1,11 @@
-package com.company;
-
+/**
+ * Created by Gunkirat on 12/04/17.
+ */
 public class Main {
 
-    public static void main(String[] args) {
-        Admin_ViewPatient a = new Admin_ViewPatient();
-        // write your code here
+    public static void main(String arg[])
+    {
+        Doctor_Search d =new Doctor_Search();
+
     }
 }
