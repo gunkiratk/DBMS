@@ -13,6 +13,7 @@ import net.miginfocom.swing.*;
  * @author Gunkirat Kaur
  */
 public class Patient_DoctorSearch extends JFrame {
+
     public Patient_DoctorSearch() {
         initComponents();
         comboBox1.addItem("Name");
@@ -27,6 +28,10 @@ public class Patient_DoctorSearch extends JFrame {
     }
 
     private void comboBox1ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void button14ActionPerformed(ActionEvent e) {
         // TODO add your code here
     }
 
@@ -55,6 +60,7 @@ public class Patient_DoctorSearch extends JFrame {
 
         //---- button14 ----
         button14.setText("Home");
+        button14.addActionListener(e -> button14ActionPerformed(e));
         contentPane.add(button14);
         button14.setBounds(10, 10, 100, 25);
 

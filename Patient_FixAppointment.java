@@ -5,17 +5,30 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
  * @author Vasu Agarwal
  */
 public class Patient_FixAppointment extends JFrame {
-    public Patient_FixAppointment() {
+    private int id;
+    public Patient_FixAppointment(int ID) {
+        this.id = ID;
         initComponents();
         setLocationRelativeTo(null);
         setSize(480,350);
         setVisible(true);
+    }
+
+    private void button1ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Patient_Login(id);
+    }
+
+    private void button2ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new MainPage_Login();
     }
 
     private void initComponents() {
@@ -38,11 +51,13 @@ public class Patient_FixAppointment extends JFrame {
 
         //---- button1 ----
         button1.setText("Home");
+        button1.addActionListener(e -> button1ActionPerformed(e));
         contentPane.add(button1);
         button1.setBounds(5, 15, 100, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText("Logout");
+        button2.addActionListener(e -> button2ActionPerformed(e));
         contentPane.add(button2);
         button2.setBounds(365, 15, 100, button2.getPreferredSize().height);
 

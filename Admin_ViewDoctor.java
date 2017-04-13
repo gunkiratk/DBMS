@@ -5,17 +5,31 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
  * @author Vasu Agarwal
  */
 public class Admin_ViewDoctor extends JFrame {
-    public Admin_ViewDoctor() {
+    private int id;
+    public Admin_ViewDoctor(int ID) {
         initComponents();
         setSize(480,350);
+        this.id = ID;
         setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    private void button1ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Admin_Login(id);
+        // TODO add your code here
+    }
+
+    private void button2ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new MainPage_Login();
     }
 
     private void initComponents() {
@@ -34,6 +48,7 @@ public class Admin_ViewDoctor extends JFrame {
 
         //---- button1 ----
         button1.setText("Home");
+        button1.addActionListener(e -> button1ActionPerformed(e));
         contentPane.add(button1);
         button1.setBounds(5, 5, 100, button1.getPreferredSize().height);
 
@@ -45,6 +60,7 @@ public class Admin_ViewDoctor extends JFrame {
 
         //---- button2 ----
         button2.setText("Logout");
+        button2.addActionListener(e -> button2ActionPerformed(e));
         contentPane.add(button2);
         button2.setBounds(365, 5, 100, button2.getPreferredSize().height);
 

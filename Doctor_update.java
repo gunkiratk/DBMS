@@ -1,5 +1,6 @@
 package com.company;
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import net.miginfocom.swing.*;
 /*
@@ -12,11 +13,24 @@ import net.miginfocom.swing.*;
  * @author Gunkirat Kaur
  */
 public class Doctor_update extends JFrame {
-    public Doctor_update() {
+    private int id;
+    public Doctor_update(int ID) {
+        this.id = ID;
         initComponents();
         setLocationRelativeTo(null);
         setSize(480,350);
         setVisible(true);
+    }
+
+    private void button14ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Doctor_Login(id);
+        // TODO add your code here
+    }
+
+    private void button13ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new MainPage_Login();
     }
 
     private void initComponents() {
@@ -48,11 +62,13 @@ public class Doctor_update extends JFrame {
 
         //---- button14 ----
         button14.setText("Home");
+        button14.addActionListener(e -> button14ActionPerformed(e));
         contentPane.add(button14);
         button14.setBounds(10, 15, 100, 25);
 
         //---- button13 ----
         button13.setText("Logout");
+        button13.addActionListener(e -> button13ActionPerformed(e));
         contentPane.add(button13);
         button13.setBounds(355, 15, 100, 25);
         contentPane.add(textArea1);

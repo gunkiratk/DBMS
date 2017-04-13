@@ -5,17 +5,30 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
  * @author Vasu Agarwal
  */
 public class Admin_ViewPatient extends JFrame {
-    public Admin_ViewPatient() {
+    private int id;
+    public Admin_ViewPatient(int ID) {
         initComponents();
         setSize(480,350);
         setLocationRelativeTo(null);
         setVisible(true);
+        this.id = ID;
+    }
+
+    private void button4ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Admin_Login(id);
+    }
+
+    private void button5ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new MainPage_Login();
     }
 
     private void initComponents() {
@@ -34,6 +47,7 @@ public class Admin_ViewPatient extends JFrame {
 
         //---- button4 ----
         button4.setText("Home");
+        button4.addActionListener(e -> button4ActionPerformed(e));
         contentPane.add(button4);
         button4.setBounds(5, 5, 100, button4.getPreferredSize().height);
 
@@ -45,6 +59,7 @@ public class Admin_ViewPatient extends JFrame {
 
         //---- button5 ----
         button5.setText("Logout");
+        button5.addActionListener(e -> button5ActionPerformed(e));
         contentPane.add(button5);
         button5.setBounds(365, 5, 100, button5.getPreferredSize().height);
 

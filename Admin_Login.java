@@ -1,7 +1,10 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
+
+import com.sun.xml.internal.bind.v2.model.core.ID;
 import net.miginfocom.swing.*;
 /*
  * Created by JFormDesigner on Wed Apr 12 18:24:39 IST 2017
@@ -13,12 +16,80 @@ import net.miginfocom.swing.*;
  * @author Gunkirat Kaur
  */
 public class Admin_Login extends JFrame {
-    public Admin_Login() {
+    private int id;
+    public Admin_Login(int ID) {
+        this.id = ID;
         initComponents();
         setSize(480,350);
         setLocationRelativeTo(null);
         setVisible(true);
     }
+
+    private void button14ActionPerformed(ActionEvent e) {
+
+        // TODO add your code here
+    }
+
+    private void button13ActionPerformed(ActionEvent e) {
+
+        setVisible(false);
+        new MainPage_Login();
+    }
+
+    private void button1ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void button3ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Doctor_SearchDoctor(id);
+    }
+
+    private void button4ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Doctor_SearchPatient(id);
+    }
+
+    private void button5ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Search_Prescription(id);
+    }
+
+    private void button10ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Search_Invoice(id);
+    }
+
+    private void button7ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Admin_ViewDoctor(id);
+    }
+
+    private void button8ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Admin_ViewPatient(id);
+    }
+
+    private void button9ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Admin_ViewPrescription(id);
+    }
+
+    private void button11ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Admin_ViewInvoice(id);
+    }
+
+    private void button15ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Admin_ViewAppointment(id);
+    }
+
+    private void button6ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Admin_Delete(id);
+    }
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -26,8 +97,6 @@ public class Admin_Login extends JFrame {
         label1 = new JLabel();
         scrollPane1 = new JScrollPane();
         textArea1 = new JTextArea();
-        button1 = new JButton();
-        button2 = new JButton();
         label2 = new JLabel();
         label3 = new JLabel();
         button3 = new JButton();
@@ -39,7 +108,6 @@ public class Admin_Login extends JFrame {
         button10 = new JButton();
         button11 = new JButton();
         button6 = new JButton();
-        button12 = new JButton();
         button13 = new JButton();
         button14 = new JButton();
         button15 = new JButton();
@@ -59,17 +127,7 @@ public class Admin_Login extends JFrame {
             scrollPane1.setViewportView(textArea1);
         }
         contentPane.add(scrollPane1);
-        scrollPane1.setBounds(285, 40, 175, 95);
-
-        //---- button1 ----
-        button1.setText("Update Patient Details");
-        contentPane.add(button1);
-        button1.setBounds(40, 55, 200, button1.getPreferredSize().height);
-
-        //---- button2 ----
-        button2.setText("Update Doctor Details");
-        contentPane.add(button2);
-        button2.setBounds(40, 85, 200, button2.getPreferredSize().height);
+        scrollPane1.setBounds(275, 40, 175, 95);
 
         //---- label2 ----
         label2.setText("Search");
@@ -83,66 +141,73 @@ public class Admin_Login extends JFrame {
 
         //---- button3 ----
         button3.setText("Doctor");
+        button3.addActionListener(e -> button3ActionPerformed(e));
         contentPane.add(button3);
         button3.setBounds(75, 140, 135, 25);
 
         //---- button4 ----
         button4.setText("Patient");
+        button4.addActionListener(e -> button4ActionPerformed(e));
         contentPane.add(button4);
         button4.setBounds(75, 165, 135, 25);
 
         //---- button5 ----
         button5.setText("Prescription");
+        button5.addActionListener(e -> button5ActionPerformed(e));
         contentPane.add(button5);
         button5.setBounds(75, 190, 135, 25);
 
         //---- button7 ----
         button7.setText("Doctor");
+        button7.addActionListener(e -> button7ActionPerformed(e));
         contentPane.add(button7);
         button7.setBounds(280, 140, 125, 25);
 
         //---- button8 ----
         button8.setText("Patient");
+        button8.addActionListener(e -> button8ActionPerformed(e));
         contentPane.add(button8);
         button8.setBounds(280, 165, 125, 25);
 
         //---- button9 ----
         button9.setText("Prescription");
+        button9.addActionListener(e -> button9ActionPerformed(e));
         contentPane.add(button9);
         button9.setBounds(280, 190, 125, 24);
 
         //---- button10 ----
         button10.setText("Invoice");
+        button10.addActionListener(e -> button10ActionPerformed(e));
         contentPane.add(button10);
         button10.setBounds(75, 215, 135, 25);
 
         //---- button11 ----
         button11.setText("Invoice");
+        button11.addActionListener(e -> button11ActionPerformed(e));
         contentPane.add(button11);
         button11.setBounds(280, 215, 125, 25);
 
         //---- button6 ----
-        button6.setText("Delete Patient ");
+        button6.setText("Delete Patient/Doctor");
+        button6.addActionListener(e -> button6ActionPerformed(e));
         contentPane.add(button6);
-        button6.setBounds(35, 275, 167, 32);
-
-        //---- button12 ----
-        button12.setText("Delete Doctor");
-        contentPane.add(button12);
-        button12.setBounds(230, 275, 171, 32);
+        button6.setBounds(130, 275, 227, 32);
 
         //---- button13 ----
         button13.setText("Logout");
+        button13.addActionListener(e -> button13ActionPerformed(e));
         contentPane.add(button13);
         button13.setBounds(350, 5, 100, 25);
 
         //---- button14 ----
         button14.setText("Home");
+        button14.addActionListener(e -> button14ActionPerformed(e));
         contentPane.add(button14);
         button14.setBounds(5, 5, 100, 25);
 
         //---- button15 ----
         button15.setText("Appointment");
+        button15.addActionListener(e -> button15ActionPerformed(e));
         contentPane.add(button15);
         button15.setBounds(280, 240, 125, 25);
 
@@ -169,8 +234,6 @@ public class Admin_Login extends JFrame {
     private JLabel label1;
     private JScrollPane scrollPane1;
     private JTextArea textArea1;
-    private JButton button1;
-    private JButton button2;
     private JLabel label2;
     private JLabel label3;
     private JButton button3;
@@ -182,7 +245,6 @@ public class Admin_Login extends JFrame {
     private JButton button10;
     private JButton button11;
     private JButton button6;
-    private JButton button12;
     private JButton button13;
     private JButton button14;
     private JButton button15;

@@ -5,17 +5,38 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
  * @author Vasu Agarwal
  */
-public class Search_Prescription extends JFrame {
-    public Search_Prescription() {
+public class Search_Prescription extends JFrame{
+    private int id;
+    public Search_Prescription(int ID) {
+        this.id = ID;
         initComponents();
         setLocationRelativeTo(null);
         setSize(480,350);
         setVisible(true);
+    }
+
+    private void button1ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        if(id==0)
+            new Admin_Login(id);
+        else if(id<5000 && id>0)
+            new Patient_Login(id);
+        else if(id>=5000 && id<=10000)
+            new Doctor_Login(id);
+        else
+            JOptionPane.showMessageDialog(null,"Fuckyou");
+
+    }
+
+    private void button2ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new MainPage_Login();
     }
 
     private void initComponents() {
@@ -37,6 +58,10 @@ public class Search_Prescription extends JFrame {
 
         //---- button1 ----
         button1.setText("Home");
+        button1.addActionListener(e -> {
+			button1ActionPerformed(e);
+			button1ActionPerformed(e);
+		});
         contentPane.add(button1);
         button1.setBounds(10, 5, 100, button1.getPreferredSize().height);
 
@@ -48,6 +73,7 @@ public class Search_Prescription extends JFrame {
 
         //---- button2 ----
         button2.setText("Logout");
+        button2.addActionListener(e -> button2ActionPerformed(e));
         contentPane.add(button2);
         button2.setBounds(365, 5, 100, button2.getPreferredSize().height);
 

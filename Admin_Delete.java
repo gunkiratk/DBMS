@@ -5,17 +5,32 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
  * @author Vasu Agarwal
  */
 public class Admin_Delete extends JFrame {
-    public Admin_Delete() {
+    private int id;
+    public Admin_Delete(int ID) {
+        this.id = ID;
         initComponents();
         setSize(480,350);
         setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    private void button1ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        setVisible(false);
+        new Admin_Login(0);
+    }
+
+    private void button2ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        MainPage_Login m = new MainPage_Login();
+        // TODO add your code here
     }
 
     private void initComponents() {
@@ -44,11 +59,13 @@ public class Admin_Delete extends JFrame {
 
         //---- button1 ----
         button1.setText("Home");
+        button1.addActionListener(e -> button1ActionPerformed(e));
         contentPane.add(button1);
         button1.setBounds(5, 5, 100, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText("Logout");
+        button2.addActionListener(e -> button2ActionPerformed(e));
         contentPane.add(button2);
         button2.setBounds(350, 5, 100, button2.getPreferredSize().height);
 

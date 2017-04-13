@@ -5,17 +5,59 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
  * @author Vasu Agarwal
  */
 public class Patient_Login extends JFrame {
-    public Patient_Login() {
+    private int id;
+    public Patient_Login(int ID) {
+        this.id = ID;
         initComponents();
         setLocationRelativeTo(null);
         setSize(480,350);
         setVisible(true);
+    }
+
+    private void button2ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Doctor_SearchDoctor(id);
+    }
+
+    private void button7ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+    }
+
+    private void button6ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new MainPage_Login();
+    }
+
+    private void button1ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Patient_Update(id);
+    }
+
+    private void button3ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Search_Prescription(id);
+    }
+
+    private void button4ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Search_Invoice(id);
+    }
+
+    private void button5ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Patient_FixAppointment(id);
+    }
+
+    private void button8ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new Patient_ViewAppointments(id);
     }
 
     private void initComponents() {
@@ -52,6 +94,7 @@ public class Patient_Login extends JFrame {
 
         //---- button1 ----
         button1.setText("Update Patient");
+        button1.addActionListener(e -> button1ActionPerformed(e));
         contentPane.add(button1);
         button1.setBounds(50, 65, 175, button1.getPreferredSize().height);
 
@@ -62,21 +105,31 @@ public class Patient_Login extends JFrame {
 
         //---- button2 ----
         button2.setText("Doctor");
+        button2.addActionListener(e -> {
+			button2ActionPerformed(e);
+			button2ActionPerformed(e);
+		});
         contentPane.add(button2);
         button2.setBounds(110, 115, 140, button2.getPreferredSize().height);
 
         //---- button3 ----
         button3.setText("Prescription");
+        button3.addActionListener(e -> button3ActionPerformed(e));
         contentPane.add(button3);
         button3.setBounds(110, 145, 140, button3.getPreferredSize().height);
 
         //---- button4 ----
         button4.setText("Invoice");
+        button4.addActionListener(e -> button4ActionPerformed(e));
         contentPane.add(button4);
         button4.setBounds(110, 175, 140, button4.getPreferredSize().height);
 
         //---- button5 ----
         button5.setText("Fix Appointment");
+        button5.addActionListener(e -> {
+			button5ActionPerformed(e);
+			button5ActionPerformed(e);
+		});
         contentPane.add(button5);
         button5.setBounds(250, 230, 160, button5.getPreferredSize().height);
 
@@ -89,16 +142,19 @@ public class Patient_Login extends JFrame {
 
         //---- button6 ----
         button6.setText("Logout");
+        button6.addActionListener(e -> button6ActionPerformed(e));
         contentPane.add(button6);
         button6.setBounds(365, 10, 100, button6.getPreferredSize().height);
 
         //---- button7 ----
         button7.setText("Home");
+        button7.addActionListener(e -> button7ActionPerformed(e));
         contentPane.add(button7);
         button7.setBounds(5, 5, 100, button7.getPreferredSize().height);
 
         //---- button8 ----
         button8.setText("View Appointments");
+        button8.addActionListener(e -> button8ActionPerformed(e));
         contentPane.add(button8);
         button8.setBounds(40, 230, 160, button8.getPreferredSize().height);
 

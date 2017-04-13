@@ -5,6 +5,7 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
@@ -13,9 +14,20 @@ import javax.swing.*;
 public class Patient_Register extends JFrame {
     public Patient_Register() {
         initComponents();
-        setLocationRelativeTo(null);
         setSize(480,350);
+        setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    private void button1ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        JOptionPane.showMessageDialog(null,"Patient Registered");
+        new MainPage_Login();
+    }
+
+    private void button2ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new MainPage_Login();
     }
 
     private void initComponents() {
@@ -119,11 +131,13 @@ public class Patient_Register extends JFrame {
 
         //---- button1 ----
         button1.setText("Register");
+        button1.addActionListener(e -> button1ActionPerformed(e));
         contentPane.add(button1);
         button1.setBounds(120, 260, 100, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText("Cancel");
+        button2.addActionListener(e -> button2ActionPerformed(e));
         contentPane.add(button2);
         button2.setBounds(235, 260, 100, button2.getPreferredSize().height);
 

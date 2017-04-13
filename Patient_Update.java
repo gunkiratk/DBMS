@@ -5,17 +5,31 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 /**
  * @author Vasu Agarwal
  */
 public class Patient_Update extends JFrame {
-    public Patient_Update() {
+    private int id;
+    public Patient_Update(int ID) {
+        this.id = ID;
         initComponents();
         setLocationRelativeTo(null);
         setSize(480,350);
         setVisible(true);
+    }
+
+    private void button2ActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        setVisible(false);
+        new Patient_Login(id);
+    }
+
+    private void button3ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new MainPage_Login();
     }
 
     private void initComponents() {
@@ -92,11 +106,13 @@ public class Patient_Update extends JFrame {
 
         //---- button2 ----
         button2.setText("Home");
+        button2.addActionListener(e -> button2ActionPerformed(e));
         contentPane.add(button2);
         button2.setBounds(5, 5, 100, button2.getPreferredSize().height);
 
         //---- button3 ----
         button3.setText("Logout");
+        button3.addActionListener(e -> button3ActionPerformed(e));
         contentPane.add(button3);
         button3.setBounds(365, 5, 100, button3.getPreferredSize().height);
 

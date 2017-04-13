@@ -7,6 +7,6 @@ public class Main {
 
     public static void main(String arg[])
     {
-        Doctor_SearchDoctor d = new Doctor_SearchDoctor();
+        MainPage_Login m = new MainPage_Login();
     }
 }

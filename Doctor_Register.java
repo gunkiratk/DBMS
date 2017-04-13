@@ -1,5 +1,6 @@
 package com.company;
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import net.miginfocom.swing.*;
 /*
@@ -17,6 +18,17 @@ public class Doctor_Register extends JFrame {
         setSize(480,350);
         setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    private void button1ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        new MainPage_Login();
+    }
+
+    private void button2ActionPerformed(ActionEvent e) {
+        setVisible(false);
+        JOptionPane.showMessageDialog(null,"Doctor Registered");
+        new MainPage_Login();
     }
 
     private void initComponents() {
@@ -93,11 +105,13 @@ public class Doctor_Register extends JFrame {
 
         //---- button1 ----
         button1.setText("Cancel");
+        button1.addActionListener(e -> button1ActionPerformed(e));
         contentPane.add(button1);
         button1.setBounds(95, 265, 100, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText("Register");
+        button2.addActionListener(e -> button2ActionPerformed(e));
         contentPane.add(button2);
         button2.setBounds(305, 265, 100, 32);
 
