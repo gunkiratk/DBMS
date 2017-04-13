@@ -10,9 +10,12 @@ import javax.swing.*;
 /**
  * @author Vasu Agarwal
  */
-public class Patient_Login extends JPanel {
+public class Patient_Login extends JFrame {
     public Patient_Login() {
         initComponents();
+        setLocationRelativeTo(null);
+        setSize(480,350);
+        setVisible(true);
     }
 
     private void initComponents() {
@@ -34,15 +37,8 @@ public class Patient_Login extends JPanel {
         button10 = new JButton();
 
         //======== this ========
-
-        // JFormDesigner evaluation mark
-        setBorder(new javax.swing.border.CompoundBorder(
-            new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
-        setLayout(null);
+        Container contentPane = getContentPane();
+        contentPane.setLayout(null);
 
         //======== scrollPane1 ========
         {
@@ -51,84 +47,86 @@ public class Patient_Login extends JPanel {
             textArea1.setText("show details here");
             scrollPane1.setViewportView(textArea1);
         }
-        add(scrollPane1);
-        scrollPane1.setBounds(255, 50, 135, 140);
+        contentPane.add(scrollPane1);
+        scrollPane1.setBounds(290, 50, 175, 155);
 
         //---- button1 ----
         button1.setText("Update Patient");
-        add(button1);
-        button1.setBounds(new Rectangle(new Point(40, 60), button1.getPreferredSize()));
+        contentPane.add(button1);
+        button1.setBounds(50, 65, 175, button1.getPreferredSize().height);
 
         //---- label1 ----
         label1.setText("Search");
-        add(label1);
-        label1.setBounds(new Rectangle(new Point(40, 125), label1.getPreferredSize()));
+        contentPane.add(label1);
+        label1.setBounds(new Rectangle(new Point(60, 125), label1.getPreferredSize()));
 
         //---- button2 ----
         button2.setText("Doctor");
-        add(button2);
-        button2.setBounds(new Rectangle(new Point(85, 115), button2.getPreferredSize()));
+        contentPane.add(button2);
+        button2.setBounds(110, 115, 140, button2.getPreferredSize().height);
 
         //---- button3 ----
         button3.setText("Prescription");
-        add(button3);
-        button3.setBounds(new Rectangle(new Point(85, 145), button3.getPreferredSize()));
+        contentPane.add(button3);
+        button3.setBounds(110, 145, 140, button3.getPreferredSize().height);
 
         //---- button4 ----
         button4.setText("Invoice");
-        add(button4);
-        button4.setBounds(new Rectangle(new Point(85, 175), button4.getPreferredSize()));
+        contentPane.add(button4);
+        button4.setBounds(110, 175, 140, button4.getPreferredSize().height);
 
         //---- button5 ----
-        button5.setText("Fix Appointment with Doctor");
-        add(button5);
-        button5.setBounds(new Rectangle(new Point(30, 230), button5.getPreferredSize()));
+        button5.setText("Fix Appointment");
+        contentPane.add(button5);
+        button5.setBounds(250, 230, 160, button5.getPreferredSize().height);
 
         //---- label2 ----
         label2.setText("Patient Details");
         label2.setFont(new Font("Ubuntu", Font.PLAIN, 21));
         label2.setHorizontalAlignment(SwingConstants.CENTER);
-        add(label2);
-        label2.setBounds(0, 15, 400, label2.getPreferredSize().height);
+        contentPane.add(label2);
+        label2.setBounds(35, 15, 400, label2.getPreferredSize().height);
 
         //---- button6 ----
         button6.setText("Logout");
-        add(button6);
-        button6.setBounds(new Rectangle(new Point(330, 5), button6.getPreferredSize()));
+        contentPane.add(button6);
+        button6.setBounds(365, 10, 100, button6.getPreferredSize().height);
 
         //---- button7 ----
         button7.setText("Home");
-        add(button7);
-        button7.setBounds(new Rectangle(new Point(5, 5), button7.getPreferredSize()));
+        contentPane.add(button7);
+        button7.setBounds(5, 5, 100, button7.getPreferredSize().height);
 
         //---- button8 ----
         button8.setText("View Appointments");
-        add(button8);
-        button8.setBounds(new Rectangle(new Point(235, 230), button8.getPreferredSize()));
+        contentPane.add(button8);
+        button8.setBounds(40, 230, 160, button8.getPreferredSize().height);
 
         //---- button9 ----
         button9.setText("Complex Query 1");
-        add(button9);
-        button9.setBounds(new Rectangle(new Point(30, 265), button9.getPreferredSize()));
+        contentPane.add(button9);
+        button9.setBounds(40, 270, 160, button9.getPreferredSize().height);
 
         //---- button10 ----
         button10.setText("Complex Query 2");
-        add(button10);
-        button10.setBounds(245, 265, 115, 30);
+        contentPane.add(button10);
+        button10.setBounds(250, 270, 160, 30);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
-            for(int i = 0; i < getComponentCount(); i++) {
-                Rectangle bounds = getComponent(i).getBounds();
+            for(int i = 0; i < contentPane.getComponentCount(); i++) {
+                Rectangle bounds = contentPane.getComponent(i).getBounds();
                 preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                 preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
             }
-            Insets insets = getInsets();
+            Insets insets = contentPane.getInsets();
             preferredSize.width += insets.right;
             preferredSize.height += insets.bottom;
-            setMinimumSize(preferredSize);
-            setPreferredSize(preferredSize);
+            contentPane.setMinimumSize(preferredSize);
+            contentPane.setPreferredSize(preferredSize);
         }
+        pack();
+        setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 

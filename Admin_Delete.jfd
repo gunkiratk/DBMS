@@ -3,14 +3,17 @@ JFDML JFormDesigner: "6.0.0.0.84" Java: "1.8.0_112-release" encoding: "UTF-8"
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
-		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+			"autoSize": false
+		} ) {
 			name: "this"
+			"$locationPolicy": 1
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": "Delete Patient/Doctor"
 				"font": new java.awt.Font( "Ubuntu", 0, 21 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 90
+				"x": 125
 				"y": 10
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -19,13 +22,15 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 5
 				"y": 5
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
 				"text": "Logout"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 330
+				"x": 350
 				"y": 5
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
@@ -42,13 +47,6 @@ new FormModel {
 				"y": 65
 				"width": 50
 			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button3"
-				"text": "Delete"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 165
-				"y": 95
-			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label3"
 				"text": "Or"
@@ -60,16 +58,16 @@ new FormModel {
 				name: "label4"
 				"text": "Doctor ID"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 50
+				"width": 70
 				"height": 14
-				"x": 135
+				"x": 125
 				"y": 165
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button4"
 				"text": "Delete"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 63
+				"width": 100
 				"height": 30
 				"x": 170
 				"y": 190
@@ -82,9 +80,18 @@ new FormModel {
 				"x": 205
 				"y": 160
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button5"
+				"text": "Delete"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 100
+				"height": 30
+				"x": 170
+				"y": 95
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"size": new java.awt.Dimension( 465, 310 )
 		} )
 	}
 }

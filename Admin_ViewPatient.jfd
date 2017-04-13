@@ -3,51 +3,56 @@ JFDML JFormDesigner: "6.0.0.0.84" Java: "1.8.0_112-release" encoding: "UTF-8"
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
-		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
+			"$locationPolicy": 1
+			"$sizePolicy": 1
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button1"
+				name: "button4"
 				"text": "Home"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 5
 				"y": 5
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label1"
+				name: "label2"
 				"text": "View Patient"
 				"font": new java.awt.Font( "Ubuntu", 0, 21 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 140
+				"x": 180
 				"y": 10
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button2"
+				name: "button5"
 				"text": "Logout"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 330
+				"x": 365
 				"y": 5
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button3"
+				name: "button6"
 				"text": "View"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 175
+				"x": 190
 				"y": 40
+				"width": 100
 			} )
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-				name: "scrollPane1"
+				name: "scrollPane2"
 				add( new FormComponent( "javax.swing.JTable" ) {
-					name: "table1"
+					name: "table2"
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 15
-				"y": 85
-				"width": 370
+				"y": 80
+				"width": 445
 				"height": 200
 			} )
 		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 480, 330 )
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
 		} )
 	}
 }

@@ -17,7 +17,7 @@ public class Doctor_View extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
+        // Generated using JFormDesigner Evaluation license - Vasu Agarwal
         button14 = new JButton();
         button13 = new JButton();
         label1 = new JLabel();
@@ -36,7 +36,7 @@ public class Doctor_View extends JPanel {
         //---- button14 ----
         button14.setText("Home");
         add(button14);
-        button14.setBounds(new Rectangle(new Point(5, 0), button14.getPreferredSize()));
+        button14.setBounds(new Rectangle(new Point(5, 5), button14.getPreferredSize()));
 
         //---- button13 ----
         button13.setText("Logout");
@@ -66,7 +66,7 @@ public class Doctor_View extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
+    // Generated using JFormDesigner Evaluation license - Vasu Agarwal
     private JButton button14;
     private JButton button13;
     private JLabel label1;

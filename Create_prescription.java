@@ -1,3 +1,4 @@
+package com.company;
 import java.awt.*;
 import javax.swing.*;
 import net.miginfocom.swing.*;
@@ -10,14 +11,17 @@ import net.miginfocom.swing.*;
 /**
  * @author Gunkirat Kaur
  */
-public class Create_prescription extends JPanel {
+public class Create_prescription extends JFrame {
     public Create_prescription() {
         initComponents();
+        setSize(480,350);
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
+        // Generated using JFormDesigner Evaluation license - Vasu Agarwal
         label1 = new JLabel();
         button14 = new JButton();
         button13 = new JButton();
@@ -28,69 +32,64 @@ public class Create_prescription extends JPanel {
         button1 = new JButton();
 
         //======== this ========
-
-        // JFormDesigner evaluation mark
-        setBorder(new javax.swing.border.CompoundBorder(
-            new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
-        setLayout(null);
+        Container contentPane = getContentPane();
+        contentPane.setLayout(null);
 
         //---- label1 ----
         label1.setText("Create Prescription");
         label1.setFont(new Font(".SF NS Text", Font.PLAIN, 17));
-        add(label1);
-        label1.setBounds(95, 30, 175, 26);
+        contentPane.add(label1);
+        label1.setBounds(155, 10, 175, 26);
 
         //---- button14 ----
         button14.setText("Home");
-        add(button14);
-        button14.setBounds(0, 5, 79, 25);
+        contentPane.add(button14);
+        button14.setBounds(15, 5, 100, 25);
 
         //---- button13 ----
         button13.setText("Logout");
-        add(button13);
-        button13.setBounds(320, 10, 79, 25);
+        contentPane.add(button13);
+        button13.setBounds(370, 5, 100, 25);
 
         //---- label2 ----
         label2.setText("Patient ID");
-        add(label2);
-        label2.setBounds(new Rectangle(new Point(50, 70), label2.getPreferredSize()));
-        add(textField1);
-        textField1.setBounds(150, 70, 115, 20);
+        contentPane.add(label2);
+        label2.setBounds(new Rectangle(new Point(140, 75), label2.getPreferredSize()));
+        contentPane.add(textField1);
+        textField1.setBounds(240, 70, 115, 20);
 
         //---- label3 ----
         label3.setText("Medicine");
-        add(label3);
-        label3.setBounds(new Rectangle(new Point(55, 105), label3.getPreferredSize()));
-        add(textField2);
-        textField2.setBounds(150, 100, 115, 20);
+        contentPane.add(label3);
+        label3.setBounds(new Rectangle(new Point(145, 105), label3.getPreferredSize()));
+        contentPane.add(textField2);
+        textField2.setBounds(240, 100, 115, 20);
 
         //---- button1 ----
         button1.setText("Create");
-        add(button1);
-        button1.setBounds(new Rectangle(new Point(150, 155), button1.getPreferredSize()));
+        contentPane.add(button1);
+        button1.setBounds(200, 150, 100, button1.getPreferredSize().height);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
-            for(int i = 0; i < getComponentCount(); i++) {
-                Rectangle bounds = getComponent(i).getBounds();
+            for(int i = 0; i < contentPane.getComponentCount(); i++) {
+                Rectangle bounds = contentPane.getComponent(i).getBounds();
                 preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                 preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
             }
-            Insets insets = getInsets();
+            Insets insets = contentPane.getInsets();
             preferredSize.width += insets.right;
             preferredSize.height += insets.bottom;
-            setMinimumSize(preferredSize);
-            setPreferredSize(preferredSize);
+            contentPane.setMinimumSize(preferredSize);
+            contentPane.setPreferredSize(preferredSize);
         }
+        pack();
+        setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
+    // Generated using JFormDesigner Evaluation license - Vasu Agarwal
     private JLabel label1;
     private JButton button14;
     private JButton button13;

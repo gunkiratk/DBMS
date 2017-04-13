@@ -10,9 +10,12 @@ import javax.swing.*;
 /**
  * @author Vasu Agarwal
  */
-public class Search_Invoice extends JPanel {
+public class Search_Invoice extends JFrame {
     public Search_Invoice() {
         initComponents();
+        setLocationRelativeTo(null);
+        setSize(480,350);
+        setVisible(true);
     }
 
     private void initComponents() {
@@ -26,69 +29,67 @@ public class Search_Invoice extends JPanel {
         label4 = new JLabel();
         textField2 = new JTextField();
         button5 = new JButton();
+        table1 = new JTable();
 
         //======== this ========
-
-        // JFormDesigner evaluation mark
-        setBorder(new javax.swing.border.CompoundBorder(
-            new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
-        setLayout(null);
+        Container contentPane = getContentPane();
+        contentPane.setLayout(null);
 
         //---- button1 ----
         button1.setText("Home");
-        add(button1);
-        button1.setBounds(new Rectangle(new Point(5, 5), button1.getPreferredSize()));
+        contentPane.add(button1);
+        button1.setBounds(10, 5, 100, button1.getPreferredSize().height);
 
         //---- label1 ----
         label1.setText("Search Invoice");
         label1.setFont(new Font("Ubuntu", Font.PLAIN, 21));
-        add(label1);
-        label1.setBounds(new Rectangle(new Point(130, 10), label1.getPreferredSize()));
+        contentPane.add(label1);
+        label1.setBounds(new Rectangle(new Point(170, 10), label1.getPreferredSize()));
 
         //---- button2 ----
         button2.setText("Logout");
-        add(button2);
-        button2.setBounds(new Rectangle(new Point(330, 5), button2.getPreferredSize()));
+        contentPane.add(button2);
+        button2.setBounds(365, 5, 100, button2.getPreferredSize().height);
 
         //---- label3 ----
         label3.setText("Or");
-        add(label3);
-        label3.setBounds(190, 160, 30, 15);
+        contentPane.add(label3);
+        label3.setBounds(245, 110, 20, 15);
 
         //---- button4 ----
         button4.setText("View all");
-        add(button4);
-        button4.setBounds(new Rectangle(new Point(165, 175), button4.getPreferredSize()));
+        contentPane.add(button4);
+        button4.setBounds(205, 130, 100, button4.getPreferredSize().height);
 
         //---- label4 ----
         label4.setText("Invoice ID");
-        add(label4);
-        label4.setBounds(125, 100, 49, 14);
-        add(textField2);
-        textField2.setBounds(220, 95, 65, 22);
+        contentPane.add(label4);
+        label4.setBounds(160, 50, 85, 14);
+        contentPane.add(textField2);
+        textField2.setBounds(255, 45, 65, 22);
 
         //---- button5 ----
         button5.setText("Search");
-        add(button5);
-        button5.setBounds(170, 125, 68, 30);
+        contentPane.add(button5);
+        button5.setBounds(205, 75, 100, 30);
+        contentPane.add(table1);
+        table1.setBounds(15, 165, 443, 140);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
-            for(int i = 0; i < getComponentCount(); i++) {
-                Rectangle bounds = getComponent(i).getBounds();
+            for(int i = 0; i < contentPane.getComponentCount(); i++) {
+                Rectangle bounds = contentPane.getComponent(i).getBounds();
                 preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                 preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
             }
-            Insets insets = getInsets();
+            Insets insets = contentPane.getInsets();
             preferredSize.width += insets.right;
             preferredSize.height += insets.bottom;
-            setMinimumSize(preferredSize);
-            setPreferredSize(preferredSize);
+            contentPane.setMinimumSize(preferredSize);
+            contentPane.setPreferredSize(preferredSize);
         }
+        pack();
+        setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -102,5 +103,6 @@ public class Search_Invoice extends JPanel {
     private JLabel label4;
     private JTextField textField2;
     private JButton button5;
+    private JTable table1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

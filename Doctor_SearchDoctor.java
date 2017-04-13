@@ -1,22 +1,21 @@
 /*
- * Created by JFormDesigner on Wed Apr 12 19:07:45 IST 2017
+ * Created by JFormDesigner on Fri Apr 14 02:02:15 IST 2017
  */
 
 package com.company;
 
 import java.awt.*;
 import javax.swing.*;
-import net.miginfocom.swing.*;
 
 /**
  * @author Vasu Agarwal
  */
-public class Doctor_SearchPatient extends JFrame {
-    public Doctor_SearchPatient() {
+public class Doctor_SearchDoctor extends JFrame {
+    public Doctor_SearchDoctor() {
         initComponents();
         comboBox1.addItem("Name");
         comboBox1.addItem("Age");
-        comboBox1.addItem("Illness");
+        comboBox1.addItem("Specialization");
         comboBox1.addItem("Gender");
         setLocationRelativeTo(null);
         setSize(480,350);
@@ -40,7 +39,7 @@ public class Doctor_SearchPatient extends JFrame {
         contentPane.setLayout(null);
 
         //---- label1 ----
-        label1.setText("Search Patient");
+        label1.setText("Search Doctor");
         label1.setFont(new Font("Ubuntu", Font.PLAIN, 21));
         contentPane.add(label1);
         label1.setBounds(185, 10, label1.getPreferredSize().width, 30);
@@ -100,8 +99,4 @@ public class Doctor_SearchPatient extends JFrame {
     private JScrollPane scrollPane1;
     private JTable table1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
-
-
-
-
 }

@@ -14,6 +14,9 @@ public class MainPage_Login extends JFrame {
     public MainPage_Login() {
         initComponents();
         setVisible(true);
+        setLocationRelativeTo(null);
+        setSize(480,350);
+        setVisible(true);
     }
 
     private void initComponents() {
@@ -29,64 +32,59 @@ public class MainPage_Login extends JFrame {
         button3 = new JButton();
 
         //======== this ========
-
-        // JFormDesigner evaluation mark
-        setBorder(new javax.swing.border.CompoundBorder(
-            new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
-        setLayout(null);
+        Container contentPane = getContentPane();
+        contentPane.setLayout(null);
 
         //---- label1 ----
         label1.setText("Medical Records Management System");
         label1.setFont(new Font("Ubuntu", Font.PLAIN, 21));
-        add(label1);
-        label1.setBounds(new Rectangle(new Point(25, 30), label1.getPreferredSize()));
+        contentPane.add(label1);
+        label1.setBounds(new Rectangle(new Point(55, 15), label1.getPreferredSize()));
 
         //---- label2 ----
         label2.setText("Username");
-        add(label2);
-        label2.setBounds(new Rectangle(new Point(130, 85), label2.getPreferredSize()));
+        contentPane.add(label2);
+        label2.setBounds(110, 85, 85, label2.getPreferredSize().height);
 
         //---- label3 ----
         label3.setText("Password");
-        add(label3);
-        label3.setBounds(new Rectangle(new Point(130, 110), label3.getPreferredSize()));
-        add(textField1);
+        contentPane.add(label3);
+        label3.setBounds(110, 110, 83, label3.getPreferredSize().height);
+        contentPane.add(textField1);
         textField1.setBounds(200, 80, 75, textField1.getPreferredSize().height);
 
         //---- button1 ----
         button1.setText("Sign In");
-        add(button1);
-        button1.setBounds(new Rectangle(new Point(175, 145), button1.getPreferredSize()));
+        contentPane.add(button1);
+        button1.setBounds(165, 145, 100, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText("Sign Up as a Patient");
-        add(button2);
-        button2.setBounds(new Rectangle(new Point(260, 230), button2.getPreferredSize()));
-        add(passwordField1);
+        contentPane.add(button2);
+        button2.setBounds(280, 280, 190, button2.getPreferredSize().height);
+        contentPane.add(passwordField1);
         passwordField1.setBounds(200, 105, 75, passwordField1.getPreferredSize().height);
 
         //---- button3 ----
         button3.setText("Sign Up as a Doctor");
-        add(button3);
-        button3.setBounds(260, 260, 130, 30);
+        contentPane.add(button3);
+        button3.setBounds(280, 310, 190, 30);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
-            for(int i = 0; i < getComponentCount(); i++) {
-                Rectangle bounds = getComponent(i).getBounds();
+            for(int i = 0; i < contentPane.getComponentCount(); i++) {
+                Rectangle bounds = contentPane.getComponent(i).getBounds();
                 preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                 preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
             }
-            Insets insets = getInsets();
+            Insets insets = contentPane.getInsets();
             preferredSize.width += insets.right;
             preferredSize.height += insets.bottom;
-            setMinimumSize(preferredSize);
-            setPreferredSize(preferredSize);
+            contentPane.setMinimumSize(preferredSize);
+            contentPane.setPreferredSize(preferredSize);
         }
+        pack();
+        setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 

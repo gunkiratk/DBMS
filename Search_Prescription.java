@@ -10,98 +10,99 @@ import javax.swing.*;
 /**
  * @author Vasu Agarwal
  */
-public class Search_Prescription extends JPanel {
+public class Search_Prescription extends JFrame {
     public Search_Prescription() {
         initComponents();
+        setLocationRelativeTo(null);
+        setSize(480,350);
         setVisible(true);
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         // Generated using JFormDesigner Evaluation license - Vasu Agarwal
-        button2 = new JButton();
-        label1 = new JLabel();
         button1 = new JButton();
-        label5 = new JLabel();
-        textField3 = new JTextField();
-        button6 = new JButton();
-        label6 = new JLabel();
-        button7 = new JButton();
+        label1 = new JLabel();
+        button2 = new JButton();
+        label3 = new JLabel();
+        button4 = new JButton();
+        label4 = new JLabel();
+        textField2 = new JTextField();
+        button5 = new JButton();
+        table1 = new JTable();
 
         //======== this ========
+        Container contentPane = getContentPane();
+        contentPane.setLayout(null);
 
-        // JFormDesigner evaluation mark
-        setBorder(new javax.swing.border.CompoundBorder(
-            new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
-        setLayout(null);
-
-        //---- button2 ----
-        button2.setText("Logout");
-        add(button2);
-        button2.setBounds(new Rectangle(new Point(330, 5), button2.getPreferredSize()));
+        //---- button1 ----
+        button1.setText("Home");
+        contentPane.add(button1);
+        button1.setBounds(10, 5, 100, button1.getPreferredSize().height);
 
         //---- label1 ----
         label1.setText("Search Prescription");
         label1.setFont(new Font("Ubuntu", Font.PLAIN, 21));
-        add(label1);
-        label1.setBounds(new Rectangle(new Point(105, 10), label1.getPreferredSize()));
+        contentPane.add(label1);
+        label1.setBounds(new Rectangle(new Point(145, 10), label1.getPreferredSize()));
 
-        //---- button1 ----
-        button1.setText("Home");
-        add(button1);
-        button1.setBounds(new Rectangle(new Point(5, 5), button1.getPreferredSize()));
+        //---- button2 ----
+        button2.setText("Logout");
+        contentPane.add(button2);
+        button2.setBounds(365, 5, 100, button2.getPreferredSize().height);
 
-        //---- label5 ----
-        label5.setText("Prescription ID");
-        add(label5);
-        label5.setBounds(new Rectangle(new Point(120, 120), label5.getPreferredSize()));
-        add(textField3);
-        textField3.setBounds(215, 115, 65, textField3.getPreferredSize().height);
+        //---- label3 ----
+        label3.setText("Or");
+        contentPane.add(label3);
+        label3.setBounds(245, 110, 20, 15);
 
-        //---- button6 ----
-        button6.setText("Search");
-        add(button6);
-        button6.setBounds(165, 145, 68, button6.getPreferredSize().height);
+        //---- button4 ----
+        button4.setText("View all");
+        contentPane.add(button4);
+        button4.setBounds(205, 130, 100, button4.getPreferredSize().height);
 
-        //---- label6 ----
-        label6.setText("Or");
-        add(label6);
-        label6.setBounds(185, 180, 30, 15);
+        //---- label4 ----
+        label4.setText("Prescription ID");
+        contentPane.add(label4);
+        label4.setBounds(130, 50, 115, 14);
+        contentPane.add(textField2);
+        textField2.setBounds(255, 45, 65, 22);
 
-        //---- button7 ----
-        button7.setText("View all");
-        add(button7);
-        button7.setBounds(new Rectangle(new Point(160, 195), button7.getPreferredSize()));
+        //---- button5 ----
+        button5.setText("Search");
+        contentPane.add(button5);
+        button5.setBounds(205, 75, 100, 30);
+        contentPane.add(table1);
+        table1.setBounds(15, 165, 443, 140);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
-            for(int i = 0; i < getComponentCount(); i++) {
-                Rectangle bounds = getComponent(i).getBounds();
+            for(int i = 0; i < contentPane.getComponentCount(); i++) {
+                Rectangle bounds = contentPane.getComponent(i).getBounds();
                 preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                 preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
             }
-            Insets insets = getInsets();
+            Insets insets = contentPane.getInsets();
             preferredSize.width += insets.right;
             preferredSize.height += insets.bottom;
-            setMinimumSize(preferredSize);
-            setPreferredSize(preferredSize);
+            contentPane.setMinimumSize(preferredSize);
+            contentPane.setPreferredSize(preferredSize);
         }
+        pack();
+        setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     // Generated using JFormDesigner Evaluation license - Vasu Agarwal
-    private JButton button2;
-    private JLabel label1;
     private JButton button1;
-    private JLabel label5;
-    private JTextField textField3;
-    private JButton button6;
-    private JLabel label6;
-    private JButton button7;
+    private JLabel label1;
+    private JButton button2;
+    private JLabel label3;
+    private JButton button4;
+    private JLabel label4;
+    private JTextField textField2;
+    private JButton button5;
+    private JTable table1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

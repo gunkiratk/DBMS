@@ -13,81 +13,78 @@ import javax.swing.*;
 public class Admin_ViewPatient extends JFrame {
     public Admin_ViewPatient() {
         initComponents();
+        setSize(480,350);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         // Generated using JFormDesigner Evaluation license - Vasu Agarwal
-        button1 = new JButton();
-        label1 = new JLabel();
-        button2 = new JButton();
-        button3 = new JButton();
-        scrollPane1 = new JScrollPane();
-        table1 = new JTable();
+        button4 = new JButton();
+        label2 = new JLabel();
+        button5 = new JButton();
+        button6 = new JButton();
+        scrollPane2 = new JScrollPane();
+        table2 = new JTable();
 
         //======== this ========
+        Container contentPane = getContentPane();
+        contentPane.setLayout(null);
 
-/*        // JFormDesigner evaluation mark
-        setBorder(new javax.swing.border.CompoundBorder(
-            new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-*/
-        setLayout(null);
+        //---- button4 ----
+        button4.setText("Home");
+        contentPane.add(button4);
+        button4.setBounds(5, 5, 100, button4.getPreferredSize().height);
 
-        //---- button1 ----
-        button1.setText("Home");
-        add(button1);
-        button1.setBounds(new Rectangle(new Point(5, 5), button1.getPreferredSize()));
+        //---- label2 ----
+        label2.setText("View Patient");
+        label2.setFont(new Font("Ubuntu", Font.PLAIN, 21));
+        contentPane.add(label2);
+        label2.setBounds(new Rectangle(new Point(180, 10), label2.getPreferredSize()));
 
-        //---- label1 ----
-        label1.setText("View Patient");
-        label1.setFont(new Font("Ubuntu", Font.PLAIN, 21));
-        add(label1);
-        label1.setBounds(new Rectangle(new Point(140, 10), label1.getPreferredSize()));
+        //---- button5 ----
+        button5.setText("Logout");
+        contentPane.add(button5);
+        button5.setBounds(365, 5, 100, button5.getPreferredSize().height);
 
-        //---- button2 ----
-        button2.setText("Logout");
-        add(button2);
-        button2.setBounds(new Rectangle(new Point(330, 5), button2.getPreferredSize()));
+        //---- button6 ----
+        button6.setText("View");
+        contentPane.add(button6);
+        button6.setBounds(190, 40, 100, button6.getPreferredSize().height);
 
-        //---- button3 ----
-        button3.setText("View");
-        add(button3);
-        button3.setBounds(new Rectangle(new Point(175, 40), button3.getPreferredSize()));
-
-        //======== scrollPane1 ========
+        //======== scrollPane2 ========
         {
-            scrollPane1.setViewportView(table1);
+            scrollPane2.setViewportView(table2);
         }
-        add(scrollPane1);
-        scrollPane1.setBounds(15, 85, 370, 200);
+        contentPane.add(scrollPane2);
+        scrollPane2.setBounds(15, 80, 445, 200);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
-            for(int i = 0; i < getComponentCount(); i++) {
-                Rectangle bounds = getComponent(i).getBounds();
+            for(int i = 0; i < contentPane.getComponentCount(); i++) {
+                Rectangle bounds = contentPane.getComponent(i).getBounds();
                 preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                 preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
             }
-            Insets insets = getInsets();
+            Insets insets = contentPane.getInsets();
             preferredSize.width += insets.right;
             preferredSize.height += insets.bottom;
-            setMinimumSize(preferredSize);
-            setPreferredSize(preferredSize);
+            contentPane.setMinimumSize(preferredSize);
+            contentPane.setPreferredSize(preferredSize);
         }
+        setSize(480, 330);
+        setLocationRelativeTo(null);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     // Generated using JFormDesigner Evaluation license - Vasu Agarwal
-    private JButton button1;
-    private JLabel label1;
-    private JButton button2;
-    private JButton button3;
-    private JScrollPane scrollPane1;
-    private JTable table1;
+    private JButton button4;
+    private JLabel label2;
+    private JButton button5;
+    private JButton button6;
+    private JScrollPane scrollPane2;
+    private JTable table2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

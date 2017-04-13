@@ -3,7 +3,7 @@ JFDML JFormDesigner: "6.0.0.0.84" Java: "1.8.0_112-release" encoding: "UTF-8"
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
-		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 				name: "scrollPane1"
@@ -12,52 +12,57 @@ new FormModel {
 					"text": "show details here"
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 255
+				"x": 290
 				"y": 50
-				"width": 135
-				"height": 140
+				"width": 175
+				"height": 155
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
 				"text": "Update Patient"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 40
-				"y": 60
+				"x": 50
+				"y": 65
+				"width": 175
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": "Search"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 40
+				"x": 60
 				"y": 125
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
 				"text": "Doctor"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 85
+				"x": 110
 				"y": 115
+				"width": 140
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button3"
 				"text": "Prescription"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 85
+				"x": 110
 				"y": 145
+				"width": 140
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button4"
 				"text": "Invoice"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 85
+				"x": 110
 				"y": 175
+				"width": 140
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button5"
-				"text": "Fix Appointment with Doctor"
+				"text": "Fix Appointment"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 30
+				"x": 250
 				"y": 230
+				"width": 160
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
@@ -65,7 +70,7 @@ new FormModel {
 				"font": new java.awt.Font( "Ubuntu", 0, 21 )
 				"horizontalAlignment": 0
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 0
+				"x": 35
 				"y": 15
 				"width": 400
 			} )
@@ -73,8 +78,9 @@ new FormModel {
 				name: "button6"
 				"text": "Logout"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 330
-				"y": 5
+				"x": 365
+				"y": 10
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button7"
@@ -82,33 +88,36 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 5
 				"y": 5
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button8"
 				"text": "View Appointments"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 235
+				"x": 40
 				"y": 230
+				"width": 160
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button9"
 				"text": "Complex Query 1"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 30
-				"y": 265
+				"x": 40
+				"y": 270
+				"width": 160
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button10"
 				"text": "Complex Query 2"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 115
+				"width": 160
 				"height": 30
-				"x": 245
-				"y": 265
+				"x": 250
+				"y": 270
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"size": new java.awt.Dimension( 480, 350 )
 		} )
 	}
 }

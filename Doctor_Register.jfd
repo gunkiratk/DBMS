@@ -3,15 +3,15 @@ JFDML JFormDesigner: "6.0.0.0.84" Java: "1.8.0_112-release" encoding: "UTF-8"
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
-		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label7"
 				"text": "Register Doctor"
 				"font": new java.awt.Font( ".SF NS Text", 0, 21 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 115
-				"y": 20
+				"x": 165
+				"y": 15
 				"width": 175
 				"height": 30
 			} )
@@ -19,14 +19,14 @@ new FormModel {
 				name: "label1"
 				"text": "Name"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 70
+				"x": 120
 				"y": 75
 				"width": 133
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField6"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 205
+				"x": 255
 				"y": 70
 				"width": 128
 			} )
@@ -34,14 +34,14 @@ new FormModel {
 				name: "label2"
 				"text": "Age"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 70
-				"y": 104
+				"x": 120
+				"y": 100
 				"width": 133
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 205
+				"x": 255
 				"y": 100
 				"width": 128
 			} )
@@ -49,14 +49,14 @@ new FormModel {
 				name: "label3"
 				"text": "Contact Number"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 70
+				"x": 120
 				"y": 135
 				"width": 133
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField2"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 205
+				"x": 255
 				"y": 130
 				"width": 128
 			} )
@@ -64,14 +64,14 @@ new FormModel {
 				name: "label4"
 				"text": "Address"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 70
+				"x": 120
 				"y": 165
 				"width": 133
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField3"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 205
+				"x": 255
 				"y": 160
 				"width": 128
 			} )
@@ -79,28 +79,28 @@ new FormModel {
 				name: "label5"
 				"text": "Gender"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 70
+				"x": 120
 				"y": 195
 				"width": 133
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField4"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 205
+				"x": 255
 				"y": 190
 				"width": 128
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label6"
-				"text": "Field of Specialisation"
+				"text": "Field of"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 70
+				"x": 120
 				"y": 225
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField5"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 205
+				"x": 255
 				"y": 220
 				"width": 128
 			} )
@@ -109,20 +109,28 @@ new FormModel {
 				"text": "Cancel"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 95
-				"y": 255
+				"y": 265
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
 				"text": "Register"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 85
+				"width": 100
 				"height": 32
-				"x": 200
-				"y": 255
+				"x": 305
+				"y": 265
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "Specialization"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 120
+				"y": 240
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"size": new java.awt.Dimension( 480, 350 )
 		} )
 	}
 }

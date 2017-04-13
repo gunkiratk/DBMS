@@ -10,9 +10,12 @@ import javax.swing.*;
 /**
  * @author Vasu Agarwal
  */
-public class Admin_Delete extends JPanel {
+public class Admin_Delete extends JFrame {
     public Admin_Delete() {
         initComponents();
+        setSize(480,350);
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     private void initComponents() {
@@ -23,81 +26,64 @@ public class Admin_Delete extends JPanel {
         button2 = new JButton();
         label2 = new JLabel();
         textField1 = new JTextField();
-        button3 = new JButton();
         label3 = new JLabel();
         label4 = new JLabel();
         button4 = new JButton();
         textField3 = new JTextField();
+        button5 = new JButton();
 
         //======== this ========
-
-        // JFormDesigner evaluation mark
-        setBorder(new javax.swing.border.CompoundBorder(
-            new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
-        setLayout(null);
+        Container contentPane = getContentPane();
+        contentPane.setLayout(null);
 
         //---- label1 ----
         label1.setText("Delete Patient/Doctor");
         label1.setFont(new Font("Ubuntu", Font.PLAIN, 21));
-        add(label1);
-        label1.setBounds(new Rectangle(new Point(90, 10), label1.getPreferredSize()));
+        contentPane.add(label1);
+        label1.setBounds(new Rectangle(new Point(125, 10), label1.getPreferredSize()));
 
         //---- button1 ----
         button1.setText("Home");
-        add(button1);
-        button1.setBounds(new Rectangle(new Point(5, 5), button1.getPreferredSize()));
+        contentPane.add(button1);
+        button1.setBounds(5, 5, 100, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText("Logout");
-        add(button2);
-        button2.setBounds(new Rectangle(new Point(330, 5), button2.getPreferredSize()));
+        contentPane.add(button2);
+        button2.setBounds(350, 5, 100, button2.getPreferredSize().height);
 
         //---- label2 ----
         label2.setText("Patient ID");
-        add(label2);
+        contentPane.add(label2);
         label2.setBounds(130, 70, label2.getPreferredSize().width, 15);
-        add(textField1);
+        contentPane.add(textField1);
         textField1.setBounds(205, 65, 50, textField1.getPreferredSize().height);
-
-        //---- button3 ----
-        button3.setText("Delete");
-        add(button3);
-        button3.setBounds(new Rectangle(new Point(165, 95), button3.getPreferredSize()));
 
         //---- label3 ----
         label3.setText("Or");
-        add(label3);
+        contentPane.add(label3);
         label3.setBounds(new Rectangle(new Point(190, 135), label3.getPreferredSize()));
 
         //---- label4 ----
         label4.setText("Doctor ID");
-        add(label4);
-        label4.setBounds(135, 165, 50, 14);
+        contentPane.add(label4);
+        label4.setBounds(125, 165, 70, 14);
 
         //---- button4 ----
         button4.setText("Delete");
-        add(button4);
-        button4.setBounds(170, 190, 63, 30);
-        add(textField3);
+        contentPane.add(button4);
+        button4.setBounds(170, 190, 100, 30);
+        contentPane.add(textField3);
         textField3.setBounds(205, 160, 50, 22);
 
-        { // compute preferred size
-            Dimension preferredSize = new Dimension();
-            for(int i = 0; i < getComponentCount(); i++) {
-                Rectangle bounds = getComponent(i).getBounds();
-                preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-                preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
-            }
-            Insets insets = getInsets();
-            preferredSize.width += insets.right;
-            preferredSize.height += insets.bottom;
-            setMinimumSize(preferredSize);
-            setPreferredSize(preferredSize);
-        }
+        //---- button5 ----
+        button5.setText("Delete");
+        contentPane.add(button5);
+        button5.setBounds(170, 95, 100, 30);
+
+        contentPane.setPreferredSize(new Dimension(465, 310));
+        pack();
+        setLocationRelativeTo(null);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -108,10 +94,10 @@ public class Admin_Delete extends JPanel {
     private JButton button2;
     private JLabel label2;
     private JTextField textField1;
-    private JButton button3;
     private JLabel label3;
     private JLabel label4;
     private JButton button4;
     private JTextField textField3;
+    private JButton button5;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

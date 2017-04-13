@@ -3,71 +3,86 @@ JFDML JFormDesigner: "6.0.0.0.84" Java: "1.8.0_112-release" encoding: "UTF-8"
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
-		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button2"
-				"text": "Logout"
+				name: "button1"
+				"text": "Home"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 330
+				"x": 10
 				"y": 5
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": "Search Prescription"
 				"font": new java.awt.Font( "Ubuntu", 0, 21 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 105
+				"x": 145
 				"y": 10
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button1"
-				"text": "Home"
+				name: "button2"
+				"text": "Logout"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 5
+				"x": 365
 				"y": 5
+				"width": 100
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label5"
-				"text": "Prescription ID"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 120
-				"y": 120
-			} )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField3"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 65
-				"x": 215
-				"y": 115
-			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button6"
-				"text": "Search"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 68
-				"x": 165
-				"y": 145
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label6"
+				name: "label3"
 				"text": "Or"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 30
+				"width": 20
 				"height": 15
-				"x": 185
-				"y": 180
+				"x": 245
+				"y": 110
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button7"
+				name: "button4"
 				"text": "View all"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 160
-				"y": 195
+				"x": 205
+				"y": 130
+				"width": 100
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Prescription ID"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 115
+				"height": 14
+				"x": 130
+				"y": 50
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 65
+				"height": 22
+				"x": 255
+				"y": 45
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button5"
+				"text": "Search"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"height": 30
+				"x": 205
+				"y": 75
+				"width": 100
+			} )
+			add( new FormComponent( "javax.swing.JTable" ) {
+				name: "table1"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 443
+				"x": 15
+				"y": 165
+				"height": 140
 			} )
 		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 480, 350 )
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 300 )
 		} )
 	}
 }

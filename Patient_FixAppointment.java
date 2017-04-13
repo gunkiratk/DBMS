@@ -10,9 +10,12 @@ import javax.swing.*;
 /**
  * @author Vasu Agarwal
  */
-public class Patient_FixAppointment extends JPanel {
+public class Patient_FixAppointment extends JFrame {
     public Patient_FixAppointment() {
         initComponents();
+        setLocationRelativeTo(null);
+        setSize(480,350);
+        setVisible(true);
     }
 
     private void initComponents() {
@@ -25,73 +28,68 @@ public class Patient_FixAppointment extends JPanel {
         label3 = new JLabel();
         textField1 = new JTextField();
         textField2 = new JTextField();
-        textField3 = new JTextField();
-        textField4 = new JTextField();
         button3 = new JButton();
+        textField4 = new JTextField();
+        textField5 = new JTextField();
 
         //======== this ========
-
-        // JFormDesigner evaluation mark
-        setBorder(new javax.swing.border.CompoundBorder(
-            new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-
-        setLayout(null);
+        Container contentPane = getContentPane();
+        contentPane.setLayout(null);
 
         //---- button1 ----
         button1.setText("Home");
-        add(button1);
-        button1.setBounds(new Rectangle(new Point(5, 5), button1.getPreferredSize()));
+        contentPane.add(button1);
+        button1.setBounds(5, 15, 100, button1.getPreferredSize().height);
 
         //---- button2 ----
         button2.setText("Logout");
-        add(button2);
-        button2.setBounds(new Rectangle(new Point(330, 5), button2.getPreferredSize()));
+        contentPane.add(button2);
+        button2.setBounds(365, 15, 100, button2.getPreferredSize().height);
 
         //---- label1 ----
         label1.setText("Fix Appointment");
         label1.setFont(new Font("Ubuntu", Font.PLAIN, 21));
-        add(label1);
-        label1.setBounds(new Rectangle(new Point(125, 10), label1.getPreferredSize()));
+        contentPane.add(label1);
+        label1.setBounds(new Rectangle(new Point(160, 20), label1.getPreferredSize()));
 
         //---- label2 ----
         label2.setText("Time");
-        add(label2);
-        label2.setBounds(new Rectangle(new Point(140, 70), label2.getPreferredSize()));
+        contentPane.add(label2);
+        label2.setBounds(new Rectangle(new Point(165, 85), label2.getPreferredSize()));
 
         //---- label3 ----
         label3.setText("Date");
-        add(label3);
-        label3.setBounds(new Rectangle(new Point(140, 95), label3.getPreferredSize()));
-        add(textField1);
-        textField1.setBounds(175, 65, 95, textField1.getPreferredSize().height);
-        add(textField2);
-        textField2.setBounds(175, 90, 14, 22);
-        add(textField3);
-        textField3.setBounds(215, 90, 55, 22);
-        add(textField4);
-        textField4.setBounds(195, 90, 14, 22);
+        contentPane.add(label3);
+        label3.setBounds(new Rectangle(new Point(165, 110), label3.getPreferredSize()));
+        contentPane.add(textField1);
+        textField1.setBounds(215, 80, 145, textField1.getPreferredSize().height);
+        contentPane.add(textField2);
+        textField2.setBounds(215, 105, 30, 22);
 
         //---- button3 ----
         button3.setText("Set appointment");
-        add(button3);
-        button3.setBounds(new Rectangle(new Point(150, 140), button3.getPreferredSize()));
+        contentPane.add(button3);
+        button3.setBounds(125, 145, 195, button3.getPreferredSize().height);
+        contentPane.add(textField4);
+        textField4.setBounds(255, 105, 30, 22);
+        contentPane.add(textField5);
+        textField5.setBounds(295, 105, 65, 22);
 
         { // compute preferred size
             Dimension preferredSize = new Dimension();
-            for(int i = 0; i < getComponentCount(); i++) {
-                Rectangle bounds = getComponent(i).getBounds();
+            for(int i = 0; i < contentPane.getComponentCount(); i++) {
+                Rectangle bounds = contentPane.getComponent(i).getBounds();
                 preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
                 preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
             }
-            Insets insets = getInsets();
+            Insets insets = contentPane.getInsets();
             preferredSize.width += insets.right;
             preferredSize.height += insets.bottom;
-            setMinimumSize(preferredSize);
-            setPreferredSize(preferredSize);
+            contentPane.setMinimumSize(preferredSize);
+            contentPane.setPreferredSize(preferredSize);
         }
+        pack();
+        setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
 
@@ -104,8 +102,8 @@ public class Patient_FixAppointment extends JPanel {
     private JLabel label3;
     private JTextField textField1;
     private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
     private JButton button3;
+    private JTextField textField4;
+    private JTextField textField5;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
