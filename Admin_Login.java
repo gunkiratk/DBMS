@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import com.sun.xml.internal.bind.v2.model.core.ID;
-//import net.miginfocom.swing.*;
+import net.miginfocom.swing.*;
 /*
  * Created by JFormDesigner on Wed Apr 12 18:24:39 IST 2017
  */
@@ -171,7 +171,10 @@ public class Admin_Login extends JFrame {
 
         //---- button9 ----
         button9.setText("Prescription");
-        button9.addActionListener(e -> button9ActionPerformed(e));
+        button9.addActionListener(e -> {
+			button9ActionPerformed(e);
+			button9ActionPerformed(e);
+		});
         contentPane.add(button9);
         button9.setBounds(280, 190, 125, 24);
 

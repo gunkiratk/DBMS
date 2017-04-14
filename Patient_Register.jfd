@@ -64,7 +64,6 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"
-				"text": "editable = false"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 265
 				"y": 55
@@ -106,25 +105,11 @@ new FormModel {
 				"width": 90
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField7"
+				name: "textField9"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 265
 				"y": 205
-				"width": 20
-			} )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField8"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 290
-				"y": 205
-				"width": 19
-			} )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField9"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 315
-				"y": 205
-				"width": 40
+				"width": 90
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField10"

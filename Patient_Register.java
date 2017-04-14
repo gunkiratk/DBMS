@@ -7,20 +7,57 @@ package com.company;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.sql.*;
 
 /**
  * @author Vasu Agarwal
  */
 public class Patient_Register extends JFrame {
+    static int counter = 0;
+    int present_counter = 0;
     public Patient_Register() {
+        counter++;
+        present_counter = counter;
         initComponents();
         setSize(480,350);
         setLocationRelativeTo(null);
         setVisible(true);
+        textField1.setText(String.valueOf(present_counter));
     }
 
-    private void button1ActionPerformed(ActionEvent e) {
+    private void button1ActionPerformed(ActionEvent e) throws Exception {
         setVisible(false);
+        Connection conn = null;
+        Statement stmt = null;
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project","root","abcd");
+            String query = "INSERT INTO Patient " + "VALUES(" + present_counter + "," + "'" + textField2.getText() + "'," + Integer.valueOf(textField3.getText()) + "," + Integer.valueOf(textField4.getText()) + ",'" + textField5.getText() + "','" + textField6.getText() +"','" + textField9.getText() +"','" + textField10.getText() + "')";
+            stmt = conn.createStatement();
+            stmt.executeUpdate(query);
+            conn.close();
+            System.out.println("Updated");
+        } finally
+        {
+            try
+            {
+                if(stmt!=null)
+                    stmt.close();
+            }
+            catch(SQLException se2)
+            {
+            }
+            try
+            {
+                if(conn!=null)
+                    conn.close();
+            }
+            catch(SQLException se)
+            {
+                se.printStackTrace();
+            }
+        }
         JOptionPane.showMessageDialog(null,"Patient Registered");
         new MainPage_Login();
     }
@@ -47,8 +84,6 @@ public class Patient_Register extends JFrame {
         textField4 = new JTextField();
         textField5 = new JTextField();
         textField6 = new JTextField();
-        textField7 = new JTextField();
-        textField8 = new JTextField();
         textField9 = new JTextField();
         textField10 = new JTextField();
         label10 = new JLabel();
@@ -98,9 +133,6 @@ public class Patient_Register extends JFrame {
         label9.setText("Illness");
         contentPane.add(label9);
         label9.setBounds(new Rectangle(new Point(140, 235), label9.getPreferredSize()));
-
-        //---- textField1 ----
-        textField1.setText("editable = false");
         contentPane.add(textField1);
         textField1.setBounds(265, 55, 90, textField1.getPreferredSize().height);
         contentPane.add(textField2);
@@ -113,12 +145,8 @@ public class Patient_Register extends JFrame {
         textField5.setBounds(265, 155, 90, textField5.getPreferredSize().height);
         contentPane.add(textField6);
         textField6.setBounds(265, 180, 90, textField6.getPreferredSize().height);
-        contentPane.add(textField7);
-        textField7.setBounds(265, 205, 20, textField7.getPreferredSize().height);
-        contentPane.add(textField8);
-        textField8.setBounds(290, 205, 19, textField8.getPreferredSize().height);
         contentPane.add(textField9);
-        textField9.setBounds(315, 205, 40, textField9.getPreferredSize().height);
+        textField9.setBounds(265, 205, 90, textField9.getPreferredSize().height);
         contentPane.add(textField10);
         textField10.setBounds(265, 230, 90, textField10.getPreferredSize().height);
 
@@ -131,7 +159,13 @@ public class Patient_Register extends JFrame {
 
         //---- button1 ----
         button1.setText("Register");
-        button1.addActionListener(e -> button1ActionPerformed(e));
+        button1.addActionListener(e -> {
+            try {
+                button1ActionPerformed(e);
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+        });
         contentPane.add(button1);
         button1.setBounds(120, 260, 100, button1.getPreferredSize().height);
 
@@ -175,8 +209,6 @@ public class Patient_Register extends JFrame {
     private JTextField textField4;
     private JTextField textField5;
     private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
     private JTextField textField9;
     private JTextField textField10;
     private JLabel label10;

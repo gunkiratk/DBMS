@@ -2,7 +2,7 @@ package com.company;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-//import net.miginfocom.swing.*;
+import net.miginfocom.swing.*;
 /*
  * Created by JFormDesigner on Wed Apr 12 18:40:28 IST 2017
  */
