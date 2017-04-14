@@ -2,7 +2,7 @@ package com.company;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import net.miginfocom.swing.*;
+//import net.miginfocom.swing.*;
 /*
  * Created by JFormDesigner on Wed Apr 12 18:13:56 IST 2017
  */
@@ -132,7 +132,7 @@ public class Doctor_Login extends JFrame {
         button4.setText("Prescription");
         button4.addActionListener(e -> {
 			button4ActionPerformed(e);
-			button4ActionPerformed(e);
+
 		});
         add(button4);
         button4.setBounds(165, 180, 125, button4.getPreferredSize().height);
@@ -153,7 +153,7 @@ public class Doctor_Login extends JFrame {
         button14.setText("Home");
         button14.addActionListener(e -> {
 			button14ActionPerformed(e);
-			button14ActionPerformed(e);
+
 		});
         add(button14);
         button14.setBounds(10, 10, 100, 25);

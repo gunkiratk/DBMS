@@ -1,6 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
-import net.miginfocom.swing.*;
+//import net.miginfocom.swing.*;
 /*
  * Created by JFormDesigner on Wed Apr 12 18:55:37 IST 2017
  */

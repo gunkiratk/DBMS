@@ -2,7 +2,7 @@ package com.company;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import net.miginfocom.swing.*;
+//import net.miginfocom.swing.*;
 /*
  * Created by JFormDesigner on Wed Apr 12 18:52:45 IST 2017
  */
@@ -37,7 +37,7 @@ public class Patient_DoctorSearch extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Vasu Agarwal
+        // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
         label1 = new JLabel();
         button14 = new JButton();
         button13 = new JButton();
@@ -75,11 +75,11 @@ public class Patient_DoctorSearch extends JFrame {
         {
 
             // JFormDesigner evaluation mark
-            panel1.setBorder(new javax.swing.border.CompoundBorder(
-                new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                    "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
-                    javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
-                    java.awt.Color.red), panel1.getBorder())); panel1.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
+//            panel1.setBorder(new javax.swing.border.CompoundBorder(
+//                new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
+//                    "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
+//                    javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
+//                    java.awt.Color.red), panel1.getBorder())); panel1.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
             panel1.setLayout(null);
 
@@ -136,7 +136,7 @@ public class Patient_DoctorSearch extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Vasu Agarwal
+    // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
     private JLabel label1;
     private JButton button14;
     private JButton button13;

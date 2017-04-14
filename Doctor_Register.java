@@ -2,7 +2,7 @@ package com.company;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import net.miginfocom.swing.*;
+//import net.miginfocom.swing.*;
 /*
  * Created by JFormDesigner on Wed Apr 12 17:53:51 IST 2017
  */
@@ -27,13 +27,14 @@ public class Doctor_Register extends JFrame {
 
     private void button2ActionPerformed(ActionEvent e) {
         setVisible(false);
+
         JOptionPane.showMessageDialog(null,"Doctor Registered");
         new MainPage_Login();
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Vasu Agarwal
+        // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
         label7 = new JLabel();
         label1 = new JLabel();
         textField6 = new JTextField();
@@ -139,7 +140,7 @@ public class Doctor_Register extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Vasu Agarwal
+    // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
     private JLabel label7;
     private JLabel label1;
     private JTextField textField6;
@@ -158,3 +159,4 @@ public class Doctor_Register extends JFrame {
     private JLabel label8;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
+

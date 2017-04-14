@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import com.sun.xml.internal.bind.v2.model.core.ID;
-import net.miginfocom.swing.*;
+//import net.miginfocom.swing.*;
 /*
  * Created by JFormDesigner on Wed Apr 12 18:24:39 IST 2017
  */

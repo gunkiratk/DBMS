@@ -107,7 +107,7 @@ public class Patient_Login extends JFrame {
         button2.setText("Doctor");
         button2.addActionListener(e -> {
 			button2ActionPerformed(e);
-			button2ActionPerformed(e);
+
 		});
         contentPane.add(button2);
         button2.setBounds(110, 115, 140, button2.getPreferredSize().height);
@@ -128,7 +128,7 @@ public class Patient_Login extends JFrame {
         button5.setText("Fix Appointment");
         button5.addActionListener(e -> {
 			button5ActionPerformed(e);
-			button5ActionPerformed(e);
+
 		});
         contentPane.add(button5);
         button5.setBounds(250, 230, 160, button5.getPreferredSize().height);

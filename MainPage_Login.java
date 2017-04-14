@@ -83,9 +83,7 @@ public class MainPage_Login extends JFrame {
         button1.setText("Sign In");
         button1.addActionListener(e -> {
 			button1ActionPerformed(e);
-			button1ActionPerformed(e);
-			button1ActionPerformed(e);
-			button1ActionPerformed(e);
+
 		});
         contentPane.add(button1);
         button1.setBounds(165, 120, 100, button1.getPreferredSize().height);
@@ -94,7 +92,7 @@ public class MainPage_Login extends JFrame {
         button2.setText("Sign Up as a Patient");
         button2.addActionListener(e -> {
 			button2ActionPerformed(e);
-			button2ActionPerformed(e);
+
 		});
         contentPane.add(button2);
         button2.setBounds(280, 250, 190, button2.getPreferredSize().height);

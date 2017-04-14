@@ -40,7 +40,7 @@ public class Search_Invoice extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Vasu Agarwal
+        // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
         button1 = new JButton();
         label1 = new JLabel();
         button2 = new JButton();
@@ -116,7 +116,7 @@ public class Search_Invoice extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Vasu Agarwal
+    // Generated using JFormDesigner Evaluation license - Gunkirat Kaur
     private JButton button1;
     private JLabel label1;
     private JButton button2;
